@@ -73,45 +73,6 @@ L4 = ((K*B4')-B4')/h; %% Generator for theta
 I=abs(L4)<delta;
 L4(I)=0;
 
-% %%% sparse learning
-% delta=1e-4;
-% pos3=1:p;
-% psiX0=psiX;
-% psiY0=psiY;
-% for i=1:p
-%     I=abs(L3)<delta;
-%     if isempty(I)
-%         break;
-%     end
-%     L3(I)=[];
-%     pos3(I)=[];
-%     psiX0(:,I)=[];
-%     psiY0(:,I)=[];
-%     G0=psiX0'*psiX0/Nz;
-%     A0=psiX0'*psiY0/Nz;
-%     K0 = pinv(G0) * A0;
-%     L3 = ((K0*B3')-B3')/h;
-% end
-% 
-% pos4=1:p;
-% psiX0=psiX;
-% psiY0=psiY;
-% for i=1:p
-%     I=abs(L4)<delta;
-%     if isempty(I)
-%         break;
-%     end
-%     L4(I)=[];
-%     pos4(I)=[];
-%     EXP(I,:)=[];
-%     psiX0(:,I)=[];
-%     psiY0(:,I)=[];
-%     G0=psiX0'*psiX0/Nz;
-%     A0=psiX0'*psiY0/Nz;
-%     K0 = pinv(G0) * A0;
-%     L4 = ((K0*B4')-B4')/h;
-% end
-
 %%% test
 T=35;
 t=0:h:T;
