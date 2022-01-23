@@ -13,7 +13,7 @@ z5min=-1;
 z5max=1;
 z6min=-pi/2;
 z6max=pi/2;
-Nz=1e4;
+Nz=1e6;
 z0x=zeros(6,Nz);
 z0x(1,:)=rand(1,Nz)*(z1max-z1min)+z1min;
 z0x(2,:)=rand(1,Nz)*(z2max-z2min)+z2min;
@@ -26,7 +26,7 @@ h=0.001;
 
 %%% Generate data
 % stochastic data
-sigma=0.001;
+sigma=0.01;
 Bh=sqrt(h)*randn(6,Nz);
 zxf=zeros(6,Nz);
 for i=1:Nz
